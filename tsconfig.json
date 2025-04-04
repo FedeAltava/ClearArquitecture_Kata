@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es6",                          // El objetivo de compilación, puedes cambiarlo si necesitas soporte para navegadores más antiguos.
+    "module": "commonjs",                     // Utilizamos CommonJS para que funcione con Node.js.
+    "strict": true,                           // Habilitar todas las opciones estrictas de TypeScript.
+    "esModuleInterop": true,                  // Permite importar módulos CommonJS como si fueran ESModules.
+    "skipLibCheck": true,                     // Evitar la comprobación de tipos de las dependencias para mejorar el rendimiento.
+    "forceConsistentCasingInFileNames": true, // Asegura que el sistema de archivos sea sensible a mayúsculas/minúsculas.
+    "outDir": "./dist",                       // Directorio donde se almacenarán los archivos compilados.
+    "baseUrl": "./",                          // Base URL para las rutas relativas.
+    "paths": {
+      "@/*": ["domain/*"],
+      "types": ["vitest/globals"]                    // Alias para rutas, puedes configurar esto si usas importaciones como `@/entities/User`.
+    }
+  },
+  "include": [
+    "domain/**/*",    // Incluir todos los archivos de código fuente en el directorio `src`.
+    "tests/**/*"   // Incluir los archivos de prueba dentro del directorio `tests`.
+, "data"  ],
+  "exclude": [
+    "node_modules", // Excluir `node_modules` de la compilación.
+    "dist"          // Excluir la carpeta `dist`, donde se colocan los archivos compilados.
+  ]
+}
