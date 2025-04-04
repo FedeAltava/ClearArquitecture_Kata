@@ -1,0 +1,1 @@
+# ClearArquitecture_Kata
