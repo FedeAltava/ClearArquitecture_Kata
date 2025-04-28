@@ -28,7 +28,6 @@ describe("UserInMemoryRepository", () => {
   });
 
   it("should list all users of the array", async () => {
-    const secondValidUser = { ...validUser, name: "Pepe" };
 
     await userRepository.create(validUser);
     await userRepository.create(secondValidUser);
@@ -56,7 +55,7 @@ describe("UserInMemoryRepository", () => {
     await userRepository.delete(validUser);
 
     const users = await userRepository.list();
-    console.log("usersTest", users);
+
 
     expect(users.length).toBe(1);
   });

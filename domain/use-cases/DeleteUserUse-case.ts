@@ -1,6 +1,6 @@
 import { RepositoryUser } from "@/repositories/RepositoryUser";
 import { User } from "@/entities/User";
-import { ErrorDeletingUser } from "@/errors/errors";
+import { ErrorDeletingUser } from "errors/errors";
 
 export class DeleteUser {
     constructor(private repositoryUser: RepositoryUser) { }

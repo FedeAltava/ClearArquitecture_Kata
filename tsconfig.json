@@ -16,7 +16,7 @@
   "include": [
     "domain/**/*",    // Incluir todos los archivos de código fuente en el directorio `src`.
     "tests/**/*"   // Incluir los archivos de prueba dentro del directorio `tests`.
-, "data"  ],
+, "data", "errors"  ],
   "exclude": [
     "node_modules", // Excluir `node_modules` de la compilación.
     "dist"          // Excluir la carpeta `dist`, donde se colocan los archivos compilados.

@@ -13,8 +13,6 @@ export class UserInMemoryRepository implements RepositoryUser{
 
     async delete(userToDelete: User): Promise<void> {
         this.users = this.users.filter(user=>user.id !== userToDelete.id);
-                
-        const filtrado= await this.list();
 
     }
 
